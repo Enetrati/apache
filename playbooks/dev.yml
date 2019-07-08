@@ -1,12 +1,11 @@
 ---
-- name: Install and configure Apache HTTPd
-  hosts: webservers
+- hosts: webservers
   tasks:
-    - name: Install HTTPd
-      yum:
-        - name: httpd
-          state: present
-      systemd:
-        - name: httpd
-          state: started
-          enabled: yes
+  - name: Install HTTPd
+    yum:
+    - name: httpd
+      state: present
+    systemd:
+      name: httpd
+      state: started
+      enabled: yes
