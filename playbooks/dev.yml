@@ -1,6 +1,6 @@
 ---
 - name: Installation and configuration HTTPd
-  hosts: webservers
+  hosts: apache-servers
   tasks:
     - name: Install HTTPd
       yum:
