@@ -3,7 +3,7 @@
   tasks:
   - name: Install HTTPd
     yum:
-    - name: httpd
+      name: httpd
       state: present
     systemd:
       name: httpd
