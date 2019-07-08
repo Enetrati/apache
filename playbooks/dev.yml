@@ -1,5 +1,6 @@
 ---
 - name: Installation and configuration HTTPd
+  become: yes
   hosts: apache-servers
   tasks:
     - name: Install HTTPd
