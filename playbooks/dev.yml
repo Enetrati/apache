@@ -1,6 +1,5 @@
 ---
-- name: Lalala
-  hosts: webservers
+- name: Installation and configuration HTTPd
   tasks:
     - name: Install HTTPd
       yum:
