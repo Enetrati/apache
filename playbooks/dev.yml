@@ -1,6 +1,7 @@
 ---
 - name: Installation and configuration HTTPd
   become: yes
+  become_method: su
   hosts: apache-servers
   tasks:
     - name: Install HTTPd
