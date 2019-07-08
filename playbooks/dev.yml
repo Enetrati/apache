@@ -4,22 +4,25 @@
   become_method: sudo
   become_user: root
   hosts: apache-servers
+
   vars:
     http_port: 80
     domain: exam.ext
     host_name: web
+    
   tasks:
     - name: Install HTTPd
       yum:
         name: httpd
         state: present
+
     - name: Configure vHost from template
       template:
         dest: /etc/httpd/conf.d/test.conf
         src: templates/vhost.j2
         group: root
         owner: root
-        
+
     - name: Enable HTTPd
       systemd:
         name: httpd
