@@ -6,7 +6,7 @@
   vars:
     http_port: 80
     domain: exam.ext
-    name: web
+    host_name: web
   tasks:
     - name: Install HTTPd
       yum:
