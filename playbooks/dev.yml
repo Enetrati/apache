@@ -4,6 +4,7 @@
   become_method: su
   hosts: apache-servers
   vars:
+    http_port: 80
     domain: exam.ext
     name: web
   tasks:
