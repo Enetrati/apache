@@ -1,12 +1,13 @@
 ---
-hosts: webservers
-tasks:
-  - name: Install HTTPd
-    yum:
-      name: httpd
-      state: present
-  - name: Enable HTTPd
-    systemd:
-      name: httpd
-      state: started
-      enabled: yes
+- name: Lalala
+  hosts: webservers
+  tasks:
+    - name: Install HTTPd
+      yum:
+        name: httpd
+        state: present
+    - name: Enable HTTPd
+      systemd:
+        name: httpd
+        state: started
+        enabled: yes
