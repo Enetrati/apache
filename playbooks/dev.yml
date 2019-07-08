@@ -3,11 +3,21 @@
   become: yes
   become_method: su
   hosts: apache-servers
+  vars:
+    domain: exam.ext
+    name: web
   tasks:
     - name: Install HTTPd
       yum:
         name: httpd
         state: present
+    - name: Configure vHost from template
+      template:
+        dest: /etc/httpd/conf.d/test.conf
+        src: templates/vhost.j2
+        group: root
+        owner: root
+        
     - name: Enable HTTPd
       systemd:
         name: httpd
