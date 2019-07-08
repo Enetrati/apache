@@ -2,6 +2,7 @@
 - name: Installation and configuration HTTPd
   become: yes
   become_method: sudo
+  become_user: root
   hosts: apache-servers
   vars:
     http_port: 80
