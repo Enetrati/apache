@@ -13,6 +13,7 @@
 
     - name: Set SELinux to permissive
       selinux:
+        policy: targeted
         state: permissive
     
     - name: Disable unconfined user login
